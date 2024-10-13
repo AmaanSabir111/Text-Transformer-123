@@ -9,7 +9,6 @@ import AB from './AB';
 // import {
 //   BrowserRouter as Router,
 //   Route,
-//   Link,
 //   Routes
 // } from "react-router-dom";
 
@@ -114,15 +113,19 @@ function App() {
   return (
     <>
        {/* <Router>  */}
-        <Firstrc brand="My-App" enable={btnColor} onc3={gbtn} onc2={rbtn} onc={bbutton} contact="Contact" about="About" m={ldm} btnf={bb} />
-        <AlertS al={aller} />
-        <FormI hea="Enter Text To Count Words,Characters and Transform text" btnC={btnColor} btnm={na} sred={btnColor}/>
+       <Firstrc brand="My-App" enable={btnColor} onc3={gbtn} onc2={rbtn} onc={bbutton} contact="Contact" about="About" m={ldm} btnf={bb} />
+       <AlertS al={aller} />
+       <FormI hea="Enter Text To Count Words,Characters and Transform text" btnC={btnColor} btnm={na} sred={btnColor}/>
          {/* <Routes>
           <Route exact path="/a"
             element={<AB ama={btnColor} />} />
           <Route exact path="/"
             element={<FormI hea="Enter Text To Count Words,Characters and Transform text" btnC={btnColor} btnm={na} sred={btnColor}/>} 
           />
+          <Route exact path="/Text-Transformer-123"
+            element={<FormI hea="Enter Text To Count Words,Characters and Transform text" btnC={btnColor} btnm={na} sred={btnColor}/>} 
+          />
+
 
 
         </Routes>

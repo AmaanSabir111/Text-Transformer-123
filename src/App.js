@@ -6,12 +6,12 @@ import FormI from './FormI';
 import AlertS from './AlertS';
 import AB from './AB';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Link,
+//   Routes
+// } from "react-router-dom";
 
 
 function App() {
@@ -113,10 +113,11 @@ function App() {
   }
   return (
     <>
-       <Router> 
+       {/* <Router>  */}
         <Firstrc brand="My-App" enable={btnColor} onc3={gbtn} onc2={rbtn} onc={bbutton} contact="Contact" about="About" m={ldm} btnf={bb} />
         <AlertS al={aller} />
-         <Routes>
+        <FormI hea="Enter Text To Count Words,Characters and Transform text" btnC={btnColor} btnm={na} sred={btnColor}/>
+         {/* <Routes>
           <Route exact path="/a"
             element={<AB ama={btnColor} />} />
           <Route exact path="/"
@@ -126,7 +127,7 @@ function App() {
 
         </Routes>
 
-      </Router> 
+      </Router>  */}
 
 
 

@@ -92,9 +92,7 @@ export default function FormI(props) {
 
   }
   const eleven = () => {
-    let innerT=document.getElementById("exampleFormControlTextarea1");
-    innerT.select();
-    navigator.clipboard.writeText(innerT.value);
+    navigator.clipboard.writeText(t);
      if(t.length>0){
     props.btnm("Text Color Has Been Copied","success");
 }
@@ -107,23 +105,23 @@ export default function FormI(props) {
         <h1>{props.hea}</h1>
         <div className="mb-3">
           <textarea className="form-control" placeholder="Enter Here!" style={{ fontSize: fs, color: c}} value={t} id="exampleFormControlTextarea1" onChange={onchangeof} rows="6"></textarea>
-        </div><button  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={funn} >Click To Upper Case</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`} onClick={secondB}>Click To Lower Case</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={THIRD}>Click To convert into original</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={fourth}>Clear Text</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={fifth}>Increase Font Size</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={sixth}>Decrease Font Size</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={seven}>Change Color To Green</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={eight}>Convert back to original color</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={nine}>Click to make text reverse</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={ten}>Click To Listen</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={eleven}>Copy Text</button>
-        <button className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={twelve}>Remove Extra Space</button>
+        </div><button disabled={t.length===0}    className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={funn} >Click To Upper Case</button>
+        <button disabled={t.length===0} className={`btn btn-${props.btnC} mx-2 my-1`} onClick={secondB}>Click To Lower Case</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={THIRD}>Click To convert into original</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={fourth}>Clear Text</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={fifth}>Increase Font Size</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={sixth}>Decrease Font Size</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={seven}>Change Color To Green</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={eight}>Convert back to original color</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={nine}>Click to make text reverse</button>
+        <button  disabled={t.length===0} className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={ten}>Click To Listen</button>
+        <button  disabled={t.length===0} className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={eleven}>Copy Text</button>
+        <button disabled={t.length===0}  className={`btn btn-${props.btnC} mx-2 my-1`}  onClick={twelve}>Remove Extra Space</button>
 
       </div>
       <div className="container my-1">
         <h2>Summary</h2>
-        <p>{t.split(" ").filter(wrd => wrd).length} words and {t.length} characters</p>
+        <p>{t.split(/\s+/).filter(wrd => wrd).length} words and {t.length} characters</p>
         <p>It will take {0.001 * t.length} minutes (on average) to read it</p>
         <h2>Preview</h2>
         <p>{t===""?"First Enter Text To Preview":t}</p>
